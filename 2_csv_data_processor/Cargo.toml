@@ -7,6 +7,3 @@ edition = "2021"
 
 [dependencies]
 csv = "1.2.2"
-tokio = "1.29.1"
-sqlx = {version = "0.7.1", features = ["postgres", "runtime-tokio-rustls"]}
-futures = "0.3.28"

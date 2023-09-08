@@ -3,15 +3,9 @@ use std::io::stdin;
 
 use crate::csv_processor::Values;
 
-pub fn user_cli(df: &HashMap<String, Values>) -> (String, String) {
+pub fn user_cli(df: &HashMap<String, Values>, commands: &Vec<String>) -> (String, String) {
     let column_keys = df.keys();
     const INPUT_ERROR: &str = "Error in input, please try again later";
-    let commands: Vec<String> = {
-        vec!["min", "max", "sum", "count"]
-            .iter()
-            .map(|&s| s.to_string())
-            .collect()
-    };
 
     // Column selection
     println!("Available columns, numerical selection:");
